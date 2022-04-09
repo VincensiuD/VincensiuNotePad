@@ -7,7 +7,7 @@ export function EditNote(){
     const {id} = useParams();
     
     let storedArray = Storage.getItem('Note');
-    let history = useNavigate();
+    let navigate = useNavigate();
 
     let oldNote = storedArray[id];
     let oldTitle = oldNote._title;
@@ -45,7 +45,7 @@ export function EditNote(){
 
 
         Storage.saveItem('Note',[...storedArray]);
-        history.goBack();
+        navigate("/");
                
     }
 
