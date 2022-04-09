@@ -4,8 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { Storage } from "../services";
 export function Row(props){
 
-    console.log("row is rendering")
-
     let storedArray = Storage.getItem('Note')
     if(storedArray == null){
         storedArray= [];                            
