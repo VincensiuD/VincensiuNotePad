@@ -43,7 +43,7 @@ export function AddNote(){
         setListOfNotes(updatedArray);
         
         Storage.saveItem('Note',updatedArray);
-        navigate("/homepage");
+        navigate("/");
                
     }
 
