@@ -10,7 +10,7 @@ export function Row(props){
     if(storedArray == null){
         storedArray= [];                            
       }
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     function inheritedDelete(event){
         props.itHasProperty(event.target.id);
@@ -20,7 +20,7 @@ export function Row(props){
     function EditNote(event){
         let rowIndex = event.target.id;
         
-      history.push(`/editNote/${rowIndex}`);     
+      navigate(`/editNote/${rowIndex}`);     
 
     }
 
